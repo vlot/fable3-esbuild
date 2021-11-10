@@ -1,4 +1,6 @@
 import {promises as fs} from 'fs';
+import {sassPlugin} from "esbuild-sass-plugin";
+
 import esbuild from 'esbuild';
 
 /**
@@ -34,6 +36,7 @@ const bundle = async (sourceDir, entryFile, destinationDir, productionMode = fal
             sourcemap: !productionMode,
             // Folder to put all generated files
             outdir: destinationDir,
+            plugins: [sassPlugin()]
         });
 
     if (productionMode) {
