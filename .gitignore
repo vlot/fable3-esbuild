@@ -7,3 +7,5 @@ node_modules
 bin
 obj
 out
+.fake
+.ionide
