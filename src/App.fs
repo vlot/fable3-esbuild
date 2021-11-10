@@ -10,8 +10,12 @@ open Elmish.React
 open Elmish.Debug
 open Fable.React
 open Fable.React.Props
+open Elmish
+open Elmish.Toastr
 
+Fable.Core.JsInterop.importSideEffects "../node_modules/toastr/toastr.scss"
 // MODEL
+
 
 type Model = int
 
@@ -19,14 +23,19 @@ type Msg =
     | Increment
     | Decrement
 
-let init () : Model = 0
+let init ()  = 0, Cmd.none
 
 // UPDATE
 
 let update (msg: Msg) (model: Model) =
+    let infoToast = 
+            Toastr.message "You clicked previous toast"
+            |> Toastr.title "Clicked"
+            |> Toastr.info
+
     match msg with
-    | Increment -> model + 1
-    | Decrement -> model - 1
+    | Increment -> model + 1, infoToast
+    | Decrement -> model - 1, Cmd.none
 
 // VIEW (rendered with React)
 
@@ -43,7 +52,7 @@ let view (model: Model) dispatch =
     ]
 
 // App
-Program.mkSimple init update view
+Program.mkProgram init update view
 |> Program.withReactSynchronous "elmish-app"
 |> Program.withConsoleTrace
 |> Program.withDebugger
