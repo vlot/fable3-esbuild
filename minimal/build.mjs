@@ -20,7 +20,8 @@ const bundle = async (sourceDir, entryFile, destinationDir, productionMode = fal
             }, options);
     }
 
-    const initialResult = await runBuild(
+    let func = productionMode ? esbuild.build : esbuild.context;
+    const initialResult = await func(
         {
             entryPoints: {
                 app: `${sourceDir}/${entryFile}`,
@@ -36,16 +37,12 @@ const bundle = async (sourceDir, entryFile, destinationDir, productionMode = fal
             outdir: destinationDir,
         });
 
-    if (productionMode) {
-        const buildName = productionMode ? 'production' : 'initial';
-        if (initialResult.errors.length > 0)
-            console.log(`${buildName} js-build failed:`, initialResult.errors);
-        else if (initialResult.warnings.length > 0)
-            console.log(`${buildName} js-build finished with warnings:`, initialResult.warnings);
-        else
-            console.log(`${buildName} js-build succeeded`);
-    } else {
-        console.log(`devserver running on http://${initialResult.host}:${initialResult.port}`);
+    if (!productionMode) {
+        const serveRes = await initialResult.serve({
+            servedir: destinationDir,
+            port: 3000,
+        });
+        console.log(`devserver running on http://${serveRes.host}:${serveRes.port}`);
     }
 }
 

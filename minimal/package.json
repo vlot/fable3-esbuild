@@ -1,5 +1,5 @@
 {
-  "name": "minimal-fable3-esbuild",
+  "name": "minimal-fable-esbuild",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -9,11 +9,11 @@
     "start": "dotnet fable watch src -s -o .build --run node build.mjs"
   },
   "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "esbuild": "^0.13.12",
+    "esbuild": "^0.17.5",
     "remotedev": "^0.2.9"
   }
 }
