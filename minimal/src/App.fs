@@ -8,8 +8,7 @@ module App
 open Elmish
 open Elmish.React
 open Elmish.Debug
-open Fable.React
-open Fable.React.Props
+open Feliz
 
 // MODEL
 
@@ -29,21 +28,24 @@ let update (msg: Msg) (model: Model) =
     | Decrement -> model - 1
 
 // VIEW (rendered with React)
-
-let view (model: Model) dispatch =
-
-    div [] [
-        button [ OnClick(fun _ -> dispatch Increment) ] [
-            str "+"
+[<ReactComponent>]
+let View (model: Model) dispatch =
+    React.useEffect(fun () -> Browser.Dom.document.title <- sprintf "Count = %d" model)
+    
+    Html.div [
+        Html.button [
+            prop.onClick(fun _ -> dispatch Increment)
+            prop.text "+"
         ]
-        div [] [ str (string model) ]
-        button [ OnClick(fun _ -> dispatch Decrement) ] [
-            str "-"
+        Html.div [ prop.text (string model) ]
+        Html.button [
+            prop.onClick(fun _ -> dispatch Decrement)
+            prop.text "-"
         ]
     ]
 
 // App
-Program.mkSimple init update view
+Program.mkSimple init update View
 |> Program.withReactSynchronous "elmish-app"
 |> Program.withConsoleTrace
 |> Program.withDebugger

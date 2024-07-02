@@ -3,7 +3,7 @@
     <PropertyGroup>
         <RootNamespace>MinimalApp</RootNamespace>
         <WarnOn>3390;$(WarnOn)</WarnOn>
-        <TargetFrameworks>net5.0;netstandard2.0;netstandard2.1</TargetFrameworks>
+        <TargetFrameworks>net6.0;netstandard2.0;netstandard2.1</TargetFrameworks>
         <AssemblyName>MinimalApp</AssemblyName>
     </PropertyGroup>
 
@@ -12,8 +12,9 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Fable.Core" Version="3.4.0" />
-        <PackageReference Include="Fable.Elmish.Debugger" Version="3.3.0" />
-        <PackageReference Include="Fable.Elmish.React" Version="3.0.1" />
+        <PackageReference Include="Fable.Core" Version="4.0.0-theta-007" />
+        <PackageReference Include="Fable.Elmish.Debugger" Version="4.0.0" />
+        <PackageReference Include="Fable.Elmish.React" Version="4.0.0" />
+        <PackageReference Include="Feliz" Version="2.4.0" />
     </ItemGroup>
 </Project>
