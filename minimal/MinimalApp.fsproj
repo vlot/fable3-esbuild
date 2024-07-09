@@ -8,13 +8,15 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <Content Include="build.mjs" />
+        <Content Include="package.json" />
         <Compile Include="App.fs" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Fable.Core" Version="4.0.0-theta-007" />
-        <PackageReference Include="Fable.Elmish.Debugger" Version="4.0.0" />
+        <PackageReference Include="Fable.Core" Version="4.3.0" />
+        <PackageReference Include="Fable.Elmish.Debugger" Version="4.1.0" />
         <PackageReference Include="Fable.Elmish.React" Version="4.0.0" />
-        <PackageReference Include="Feliz" Version="2.4.0" />
+        <PackageReference Include="Feliz" Version="2.8.0" />
     </ItemGroup>
 </Project>
