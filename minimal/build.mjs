@@ -10,16 +10,6 @@ import esbuild from 'esbuild';
  * @returns {Promise<void>} Will resolve once it's built successfully
  */
 const bundle = async (sourceDir, entryFile, destinationDir, productionMode = false) => {
-    const runBuild = options => {
-        if (productionMode)
-            return esbuild.build(options);
-        else
-            return esbuild.serve({
-                servedir: destinationDir,
-                port: 3000,
-            }, options);
-    }
-
     let func = productionMode ? esbuild.build : esbuild.context;
     const initialResult = await func(
         {

@@ -1,12 +1,13 @@
 {
   "name": "minimal-fable-esbuild",
   "version": "1.0.0",
+  "packageManager": "yarn@4.3.0+sha256.d7f2fd514a5862009753c52798cc48ae602d181c09341cf2ff8b9c935dc3db1a",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "postinstall": "dotnet tool restore",
-    "build": "dotnet fable src -s -o .build --run node build.mjs -p",
-    "start": "dotnet fable watch src -s -o .build --run node build.mjs"
+    "build": "dotnet fable . -s -o .build --run yarn node build.mjs -p",
+    "start": "dotnet fable watch . -s -o .build --run yarn node build.mjs"
   },
   "dependencies": {
     "react": "^18.2.0",
