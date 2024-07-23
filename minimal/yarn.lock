@@ -159,34 +159,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"async-limiter@npm:~1.0.0":
-  version: 1.0.1
-  resolution: "async-limiter@npm:1.0.1"
-  checksum: 10c0/0693d378cfe86842a70d4c849595a0bb50dc44c11649640ca982fa90cbfc74e3cc4753b5a0847e51933f2e9c65ce8e05576e75e5e1fd963a086e673735b35969
-  languageName: node
-  linkType: hard
-
-"base-64@npm:0.1.0":
-  version: 0.1.0
-  resolution: "base-64@npm:0.1.0"
-  checksum: 10c0/fe0dcf076e823f04db7ee9b02495be08a91c445fbc6db03cb9913be9680e2fcc0af8b74459041fe08ad16800b1f65a549501d8f08696a8a6d32880789b7de69d
-  languageName: node
-  linkType: hard
-
-"clone@npm:2.1.1":
-  version: 2.1.1
-  resolution: "clone@npm:2.1.1"
-  checksum: 10c0/387e0cd7856b0bd3eeb24dcda2d165740ea0383911a020e2a017a6b641208cefb790274a39312fab48c979ab538204e3807208ab6af5ebe578eb05a94131fa61
-  languageName: node
-  linkType: hard
-
-"component-emitter@npm:1.2.1":
-  version: 1.2.1
-  resolution: "component-emitter@npm:1.2.1"
-  checksum: 10c0/6c27bd7bba028776464cee6c1686c8e02cb9a576a11df93f1fc211ae3eb2de234ae90952d0b7fb3acc9c92c8baa389fa7389681b2e8689d2ca463e94f3ad30b2
-  languageName: node
-  linkType: hard
-
 "esbuild@npm:^0.17.5":
   version: 0.17.19
   resolution: "esbuild@npm:0.17.19"
@@ -271,20 +243,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jsan@npm:^3.1.3":
-  version: 3.1.14
-  resolution: "jsan@npm:3.1.14"
-  checksum: 10c0/86b6738e90769d8e717849f7bd9ba4742a4ffb1edfa28354521e0c8f106a3addd15eb79d723b47dc9867c70ed06245e4ee14cb2a10c99b91ea612071688137dc
-  languageName: node
-  linkType: hard
-
-"linked-list@npm:0.1.0":
-  version: 0.1.0
-  resolution: "linked-list@npm:0.1.0"
-  checksum: 10c0/b63862851a95af9bb71ef2e6fb0d607edefa3336fa74e6ad1c42a307bcd9900bdd25b59f7ea92ff96d94a10fa95181304663edca8efc735a7a15c1f985815426
-  languageName: node
-  linkType: hard
-
 "loose-envify@npm:^1.1.0":
   version: 1.4.0
   resolution: "loose-envify@npm:1.4.0"
@@ -303,23 +261,9 @@ __metadata:
     esbuild: "npm:^0.17.5"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
-    remotedev: "npm:^0.2.9"
+    remotedev: "portal:dummy-remotedev"
   languageName: unknown
   linkType: soft
-
-"querystring@npm:0.2.0":
-  version: 0.2.0
-  resolution: "querystring@npm:0.2.0"
-  checksum: 10c0/2036c9424beaacd3978bac9e4ba514331cc73163bea7bf3ad7e2c7355e55501938ec195312c607753f9c6e70b1bf9dfcda38db6241bd299c034e27ac639d64ed
-  languageName: node
-  linkType: hard
-
-"querystring@npm:^0.2.0":
-  version: 0.2.1
-  resolution: "querystring@npm:0.2.1"
-  checksum: 10c0/6841b32bec4f16ffe7f5b5e4373b47ad451f079cde3a7f45e63e550f0ecfd8f8189ef81fb50079413b3fc1c59b06146e4c98192cb74ed7981aca72090466cd94
-  languageName: node
-  linkType: hard
 
 "react-dom@npm:^18.2.0":
   version: 18.3.1
@@ -342,47 +286,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"remotedev@npm:^0.2.9":
-  version: 0.2.9
-  resolution: "remotedev@npm:0.2.9"
-  dependencies:
-    jsan: "npm:^3.1.3"
-    querystring: "npm:^0.2.0"
-    rn-host-detect: "npm:^1.0.1"
-    socketcluster-client: "npm:^13.0.0"
-  checksum: 10c0/49cce5da565091d3a90c108679d963266e2fccdd57adb1db999fb81bdb42579cbcaeb925a00fbf91879f387328a0bdb8f36e8a06556466cc0b2842e25d3ac4b6
+"remotedev@portal:dummy-remotedev::locator=minimal-fable-esbuild%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "remotedev@portal:dummy-remotedev::locator=minimal-fable-esbuild%40workspace%3A."
   languageName: node
-  linkType: hard
-
-"rn-host-detect@npm:^1.0.1":
-  version: 1.2.0
-  resolution: "rn-host-detect@npm:1.2.0"
-  checksum: 10c0/94067014566c738b3cb786d507a3cf4f4fab79b51b0d7c38bea0a48d536458c7218e01f259e03fa51cf1cf6f62ad4c01fcd36c6fa3b725a86eace02dd30d929f
-  languageName: node
-  linkType: hard
-
-"sc-channel@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "sc-channel@npm:1.2.0"
-  dependencies:
-    component-emitter: "npm:1.2.1"
-  checksum: 10c0/979fcc27c1596bca21979a357f7a69ff173c1c0dea3b2c307ab06d6d7a0de8dd80498ccd1c8a7eb8cf8f25cfc939f874ffa506780e008f12ee430527a20a7ac5
-  languageName: node
-  linkType: hard
-
-"sc-errors@npm:^1.4.0":
-  version: 1.4.1
-  resolution: "sc-errors@npm:1.4.1"
-  checksum: 10c0/d2deffd6b9dd04529eefae68a6070307921b957d8e5e1b7d3e481723267fea87cfcdbfd019b8ece26fbc18631ca86abec2a819a2ca31e553204e663b993341db
-  languageName: node
-  linkType: hard
-
-"sc-formatter@npm:^3.0.1":
-  version: 3.0.3
-  resolution: "sc-formatter@npm:3.0.3"
-  checksum: 10c0/8b29dbe1fc964240e67376fbbbd7ea24546241269279905fc5c2cc6824582b9dff8d3c45709e0175cd7ff54516f9c0ab19f8e63b5e45616e6d1f2030d0e3b34a
-  languageName: node
-  linkType: hard
+  linkType: soft
 
 "scheduler@npm:^0.23.2":
   version: 0.23.2
@@ -390,41 +298,5 @@ __metadata:
   dependencies:
     loose-envify: "npm:^1.1.0"
   checksum: 10c0/26383305e249651d4c58e6705d5f8425f153211aef95f15161c151f7b8de885f24751b377e4a0b3dd42cce09aad3f87a61dab7636859c0d89b7daf1a1e2a5c78
-  languageName: node
-  linkType: hard
-
-"socketcluster-client@npm:^13.0.0":
-  version: 13.0.1
-  resolution: "socketcluster-client@npm:13.0.1"
-  dependencies:
-    base-64: "npm:0.1.0"
-    clone: "npm:2.1.1"
-    component-emitter: "npm:1.2.1"
-    linked-list: "npm:0.1.0"
-    querystring: "npm:0.2.0"
-    sc-channel: "npm:^1.2.0"
-    sc-errors: "npm:^1.4.0"
-    sc-formatter: "npm:^3.0.1"
-    uuid: "npm:3.2.1"
-    ws: "npm:5.1.1"
-  checksum: 10c0/d1c68ffd068c63f2f8cb10624cc82fa75cef31e5025cb1878106745dc43d2a793dcfa003e635e1d219bf36badfa6e0f88849285c870513a0936defd0ae5e7c3c
-  languageName: node
-  linkType: hard
-
-"uuid@npm:3.2.1":
-  version: 3.2.1
-  resolution: "uuid@npm:3.2.1"
-  bin:
-    uuid: ./bin/uuid
-  checksum: 10c0/3341acf8ad0e0fa00c25f35078f4055dc0f3cf7dc7a6da7ba7cc40b1ddd862e91179bf2ba648cc1b20d4abbada3f91e5e7b43dae059388e7370651de6968ec9c
-  languageName: node
-  linkType: hard
-
-"ws@npm:5.1.1":
-  version: 5.1.1
-  resolution: "ws@npm:5.1.1"
-  dependencies:
-    async-limiter: "npm:~1.0.0"
-  checksum: 10c0/961988b62e4ca1a9eabe5eafbb5139ff1188955f42323d8e994301a2ff7397f010c704fb15190c697fa4ca202ea401a18715e0f33942615f0f9516733809d1c3
   languageName: node
   linkType: hard
