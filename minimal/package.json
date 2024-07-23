@@ -15,6 +15,6 @@
   },
   "devDependencies": {
     "esbuild": "^0.17.5",
-    "remotedev": "^0.2.9"
+    "remotedev": "portal:dummy-remotedev"
   }
 }
